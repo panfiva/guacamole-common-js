@@ -10,7 +10,7 @@ It just packages and publishes it, so one can use it easily in a npm project
 
 For more detailed documentation of the API etc. have a look at https://guacamole.apache.org/doc/gug/guacamole-common-js.html
 
-## NPM publish instructions
+## Setup
 
 ```bash
 git clone git@github.com:panfiva/guacamole-common-js.git
@@ -18,6 +18,11 @@ nvm use current
 corepack enable
 yarn set version stable
 yarn install
+```
+
+## Guacamole Update and NPM Publish
+
+```bash
 yarn build
 npm publish --access public
 ```
