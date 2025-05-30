@@ -10,16 +10,19 @@ It just packages and publishes it, so one can use it easily in a npm project
 
 For more detailed documentation of the API etc. have a look at https://guacamole.apache.org/doc/gug/guacamole-common-js.html
 
-# NPM publish instructions
+## NPM publish instructions
 
 ```bash
 git clone git@github.com:panfiva/guacamole-common-js.git
+nvm use current
+corepack enable
+yarn set version stable
 yarn install
 yarn build
 npm publish --access public
 ```
 
-# Usage instructions
+## Usage instructions
 
 Install required modules
 
