@@ -59,6 +59,7 @@ gulp.task('updateVersion', function (callback) {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonFile, 'utf8'))
         packageJson.version = result['project']['version'][0]
         fs.writeFileSync(packageJsonFile, JSON.stringify(packageJson, null, 2))
+        fs.appendFileSync(packageJsonFile, '\n');
         callback()
     }, null)
 })
