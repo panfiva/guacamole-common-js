@@ -1,5 +1,3 @@
-// copied from https://github.com/Arikael/guacamole-common-js.git
-
 import gulp from 'gulp'
 import concat from 'gulp-concat'
 import insert from 'gulp-insert'
@@ -21,7 +19,9 @@ gulp.task('getGuacamole', async function () {
         fs.mkdirSync(tmpDir, {recursive: true})
         const file = fs.createWriteStream(zipFile);
         const tagResult = await axios.get('https://api.github.com/repos/apache/guacamole-client/tags')
-        const tag = tagResult.data[0].name
+        const stableTags = tagResult.data.filter(t => !/rc/i.test(t.name))
+        const tag = stableTags[0].name
+        // const tag = tagResult.data[0].name
         taggedDir = `${tmpDir}/guacamole-client-${tag}`
         const fileResult = await axios.get(`https://github.com/apache/guacamole-client/archive/refs/tags/${tag}.tar.gz`, {
             responseType: 'stream'
