@@ -3,7 +3,8 @@
   "version": "1.6.0",
   "description": "The Guacamole javascript client",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "update": "npx npm-check-updates --deep --upgrade"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -23,7 +24,7 @@
   ],
   "type": "module",
   "devDependencies": {
-    "axios": "^1.7.7",
+    "axios": "^1.9.0",
     "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-insert": "^0.5.0",
