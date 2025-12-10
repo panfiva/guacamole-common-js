@@ -1,10 +1,11 @@
 {
   "name": "@panfiva/guacamole-common-js",
-  "version": "1.6.0",
+  "version": "1.6.0-rc.3",
   "description": "The Guacamole javascript client",
   "scripts": {
     "build": "gulp",
-    "update": "npx npm-check-updates --deep --upgrade"
+    "update": "npx npm-check-updates --deep --upgrade",
+    "publish": "npm publish --access public -tag latest"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
