@@ -1,6 +1,6 @@
 {
   "name": "@panfiva/guacamole-common-js",
-  "version": "1.5.5-fix.1",
+  "version": "1.6.0",
   "description": "The Guacamole javascript client",
   "scripts": {
     "build": "gulp",
